@@ -1,0 +1,79 @@
+:root {
+    --blue: #89cff0;
+}
+
+header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+header nav {
+    margin-right: 20px;
+}
+header nav li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 20px;
+}
+
+.logo {
+    max-width: 400px;
+}
+
+.content {
+    display: flex;
+}
+
+.content .sidebar {
+    padding: 30px 70px;
+    max-width: 500px;
+    background-color: var(--blue);
+}
+
+h1 {
+    color: var(--blue);
+}
+.content .displayContent {
+    padding: 25px;
+}
+
+.content .displayContent .weblinks a{
+    display: block;
+}
+
+td > img {
+    height: 500px;
+}
+
+.resume td , .resume tr{
+    border: 2px solid var(--blue);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 3px;
+}
+
+th {
+    font-size: larger;
+}
+
+.noDec {
+    list-style-type: none;
+    text-align: center;
+}
+#software {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    margin: 20px;
+}
