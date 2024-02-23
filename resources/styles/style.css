@@ -26,7 +26,7 @@ header nav li {
 
 .content .sidebar {
     padding: 30px 70px;
-    max-width: 500px;
+    max-width: 300px;
     background-color: var(--blue);
 }
 
@@ -45,30 +45,107 @@ td > img {
     height: 500px;
 }
 
-.resume td , .resume tr{
-    border: 2px solid var(--blue);
+.grid {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap: 1px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "head head"
+    "education educationInfo"
+    "softwareExperience softwareInfo"
+    "experience experienceInfo"
+    "awards awardsInfo"
+    "orgs orgsInfo"
+    "portfolioLink portfolioLink";
+    border: 2px solid #5b5b5b;
+}
+.resumeContainer {
+    background-color: #5b5b5b;
 }
 
-table {
-    border-collapse: collapse;
+.grid > div {
+    background-color: white;
+    padding: 10px;
 }
 
-td {
-    padding: 3px;
+.head {
+    grid-area: head;
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    grid-template-rows: 1fr;
+    gap: 1px;
+    grid-template-areas:
+    "name resumeLinks resumeContact";
+    text-align: center;
+}
+.name {
+    grid-area: name;
 }
 
-th {
-    font-size: larger;
+.resumeLinks {
+    grid-area: resumeLinks;
+}
+
+.resumeContact {
+    grid-area: resumeContact;
+}
+
+.education {
+    grid-area: education;
+}
+
+.softwareExperience {
+    grid-area: softwareExperience;
+}
+
+.experience {
+    grid-area: experience;
+}
+
+.awards {
+    grid-area: awards;
+}
+
+.orgs {
+    grid-area: orgs;
+}
+
+.portfolioLink {
+    grid-area: portfolioLink;
+    text-align: center;
+}
+
+.educationInfo {
+    grid-area: educationInfo;
+}
+
+.softwareInfo {
+    grid-area: softwareInfo;
+}
+
+.experienceInfo {
+    grid-area: experienceInfo;
+}
+
+.awardsInfo {
+    grid-area: awardsInfo;
+}
+
+.orgsInfo {
+    grid-area: orgsInfo;
 }
 
 .noDec {
     list-style-type: none;
     text-align: center;
 }
-#software {
-    display: inline-flex;
-    flex-wrap: wrap;
+
+.date {
+    float: right;
 }
+
 
 footer {
     text-align: center;
